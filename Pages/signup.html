@@ -1,0 +1,63 @@
+<div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="/Images/JUNGLE1.png" class="bd-placeholder-img" alt="...">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Nos habitats</h1>
+            <p class="opacity-75">Vous trouverez ici nos habitats et animaux.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Les Horraires</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scene text-center text-white">
+        <div class="hero-scene-content">
+            <h1>Inscription</h1>
+        </div>
+    </div>
+    <div class="container">
+        <form id="formulaireInscription">
+
+          <div class="mb-3">
+            <label for="RoleSelect" class="form-label">Choisissez votre rôle</label>
+            <select class="form-select" id="RoleSelect" name="role">
+                <option value="ROLE_ADMIN">Admin</option>
+                <option value="ROLE_EMPLOYE">Employé</option>
+                <option value="ROLE_VETERINAIRE">Vétérinaire</option>
+            </select>
+        </div>
+        
+            <div class="mb-3">
+              <label for="EmailInput" class="form-label">Email</label>
+              <input type="email" class="form-control" id="EmailInput" placeholder="test@mail.fr" name="email">
+              <div class="invalid-feedback">
+                Le mail n'est pas au bon format 
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="PasswordInput" class="form-label">Mot de passe</label>
+              <input type="password" class="form-control" id="PasswordInput" name="password">
+              <div class="invalid-feedback">
+                Le mot de passe n'est pas assez robuste : Au moins 8 caractères, comprenant au moins 1 lettre majuscule, 1 minuscule, 1 chiffre, et 1 caractère spéciale
+              </div>
+              <div class="valid-feedback">
+                Le mot de passe est robuste
+              </div>
+            </div>
+            <div class="mb-3">
+                <label for="ValidatePasswordInput" class="form-label">Validez votre mot de passe</label>
+                <input type="password" class="form-control" id="ValidatePasswordInput" name="PasswordConfirm">
+                <div class="invalid-feedback">
+                  Mot de passe non identique 
+                </div>
+              </div>
+            <div class="text-center">
+                <button type="button" class="btn btn-primary" id="btn-validation-inscription">Inscription</button>
+            </div>
+        </form>
+        <div class="text-center pt-3">
+            <a href="/signin">Vous avez déjà un compte ? Connectez-vous ici !</a>
+        </div>
+    </div>
+

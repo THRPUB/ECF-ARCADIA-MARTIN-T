@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Pagecontact{% endblock %}
+
+{% block body %}
+    <h1>Edit Pagecontact</h1>
+
+    {{ include('pagecontact/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_pagecontact_index') }}">back to list</a>
+
+    {{ include('pagecontact/_delete_form.html.twig') }}
+{% endblock %}

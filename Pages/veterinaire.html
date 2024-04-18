@@ -1,0 +1,191 @@
+<div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="/Images/JUNGLE1.png" class="bd-placeholder-img" alt="...">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Nos habitats</h1>
+            <p class="opacity-75">Vous trouverez ici nos habitats et animaux.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Les Horraires</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scene text-center text-white">
+      <div class="hero-scene-content">
+          <h1>Mon compte</h1>
+      </div>
+  </div>
+</div>
+
+
+<body>
+    
+
+  <div class="container" >
+<!-- data-show="vétérinaire" -->
+
+    <form id="VisiteForm">
+      <div class="mb-3">
+          <label for="NomInput" class="form-label">Nom du vétérinaire</label>
+          <input type="text" class="form-control" id="NomInput" placeholder="Votre nom" value="John" name="Nom"> 
+      </div>
+      <div class="mb-3">
+          <label for="AnilmalInput" class="form-label">Animal ID</label>
+          <input type="text" class="form-control" id="AnilmalInput" placeholder="Exemple : 23" name="TypeAnimal">
+      </div>
+      <div class="mb-3">
+          <label for="EtatInput" class="form-label">État de l'animal</label>
+          <input type="text" class="form-control" id="EtatInput" placeholder="État de l'animal" name="EtatAnimal"> 
+      </div>
+      <div class="mb-3">
+          <label for="NourritureInput" class="form-label">Nourriture proposée</label>
+          <input type="text" class="form-control" id="NourritureInput" placeholder="Nourriture proposée" name="NourritureProposee"> 
+      </div>
+      <div class="mb-3">
+          <label for="GrammageInput" class="form-label">Grammage de la nourriture</label>
+          <input type="text" class="form-control" id="GrammageInput" placeholder="Grammage de la nourriture" name="GrammageNourriture"> 
+      </div>
+      <div class="mb-3">
+          <label for="DatePassageInput" class="form-label">Date de passage</label>
+          <input type="date" class="form-control" id="DatePassageInput" name="DatePassage"> 
+      </div>
+      <div class="mb-3">
+          <label for="DetailEtatInput" class="form-label">Détail de l'état de l'animal (facultatif)</label>
+          <textarea class="form-control" id="DetailEtatInput" rows="3" placeholder="Détail de l'état de l'animal" name="DetailEtatAnimal"></textarea>
+      </div>
+      <div class="text-center">
+          <button type="button" class="btn btn-primary" id="btnEnvois">Envoyer le compte rendu</button>
+      </div>
+  </form>
+
+
+  <form id="AvisForm">
+    <h2 class="text-center mt-4">Donner un avis sur un habitat</h2>
+    <div class="mb-3">
+        <label for="NomVeterinaireInput" class="form-label">Nom du vétérinaire</label>
+        <input type="text" class="form-control" id="NomVeterinaireInput" placeholder="Nom du vétérinaire" name="NomVeterinaire">
+    </div>
+    <div class="mb-3">
+        <label for="NomHabitatInput" class="form-label">Nom de l'habitat</label>
+        <input type="text" class="form-control" id="NomHabitatInput" placeholder="Nom de l'habitat" name="NomHabitat">
+    </div>
+    <div class="mb-3">
+        <label for="AvisInput" class="form-label">Avis</label>
+        <textarea class="form-control" id="AvisInput" rows="3" placeholder="Votre avis sur l'habitat" name="Avis"></textarea>
+    </div>
+    <div class="text-center">
+        <button type="button" class="btn btn-primary" id="btnEnvoisAvis">Envoyer l'avis</button>
+    </div>
+</form>
+
+  
+  <title>Tableau d'informations sur les animaux</title>
+</head>
+
+<body>
+  <div class="container mt-4 custom-tr">
+    <h2 class="text-center">Tableau des passages des employés</h2>
+    <div class="table-responsive">
+      <table id="tablePassages" class="table">
+        <thead>
+          <tr>
+            <th>ID de l'animal</th>
+            <th>Nom de l'animal</th>
+            <th>Nourriture apportée</th>
+            <th>Grammage de la nourriture</th>
+            <th>Date de passage</th>
+            <th>Heure de passage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Les passages seront ajoutés ici dynamiquement -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+  <div class="container mt-4 custom-tr">
+    <h2 class="text-center">Tableau des passages des Vétérinaire</h2>
+    <div class="table-responsive">
+      <table id="tableVisites" class="table">
+          <thead>
+            <tr>
+              <th>ID de l'animal</th>
+              <th>Prénom l'animal</th>
+              <th>Etat de l'animal</th>
+              <th>Nourriture apportée</th>
+              <th>Grammage de la nourriture</th>
+              <th>Date de passage</th>
+              <th>Détails sur l'animal</th>
+              <th>Nom du vétérinaire</th>
+            </tr>
+          </thead>
+          <tbody class="Importget">
+            <!-- Les passages seront ajoutés ici dynamiquement -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="container mt-4 custom-tr">
+      <h2 class="text-center">Tableau des avis des habitats</h2>
+      <div class="table-responsive">
+          <table id="tableAvis" class="table">
+              <thead>
+                  <tr>
+                      <th>ID</th>
+                      <th>Nom du vétérinaire</th>
+                      <th>Nom de l'habitat</th>
+                      <th>Avis</th>
+                  </tr>
+              </thead>
+              <tbody id="tableAvisBody">
+                  <!-- Les avis seront ajoutés ici dynamiquement -->
+              </tbody>
+          </table>
+      </div>
+  </div>
+  
+
+    <div class="container mt-4 custom-tr">
+      <h2 class="text-center">Tableau des animaux</h2>
+      <div class="table-responsive">
+        <table id="tableAnimal" class="table">
+          <thead>
+            <tr>
+              <th>ID de l'animal</th>
+              <th>Prénom l'animal</th>
+              <th>Race</th>
+              <th>Habitat</th>
+            </tr>
+          </thead>
+          <tbody id="tableAnimalBody" class="Importget">
+            <!-- Les passages seront ajoutés ici dynamiquement -->
+          </tbody>
+          <!-- Le contenu du tableau des animaux sera ajouté ici dynamiquement -->
+        </table>
+      </div>
+    </div>
+
+    <div class="container mt-4 custom-tr">
+      <h2 class="text-center">Tableau des habitats</h2>
+      <div class="table-responsive">
+        <table id="tableHabitat" class="table">
+          <thead>
+            <tr>
+              <th>ID de l'habitat</th>
+              <th>Nom de l'habitat</th>
+            </tr>
+          </thead>
+          <tbody id="tablehabitatBody" class="Importget">
+            <!-- Les passages seront ajoutés ici dynamiquement -->
+          </tbody>
+          <!-- Le contenu du tableau des animaux sera ajouté ici dynamiquement -->
+        </table>
+      </div>
+    </div>
+
+</body>

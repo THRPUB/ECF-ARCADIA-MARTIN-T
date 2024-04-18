@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}VisiteVeterinaire index{% endblock %}
+
+{% block body %}
+    <h1>VisiteVeterinaire index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Visite_id</th>
+                <th>Etat_animal</th>
+                <th>Nourriture_proposee</th>
+                <th>Grammage_nourriture</th>
+                <th>Date_passage</th>
+                <th>Detail_etat_animal</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for visite_veterinaire in visite_veterinaires %}
+            <tr>
+                <td>{{ visite_veterinaire.visiteId }}</td>
+                <td>{{ visite_veterinaire.etatAnimal }}</td>
+                <td>{{ visite_veterinaire.nourritureProposee }}</td>
+                <td>{{ visite_veterinaire.grammageNourriture }}</td>
+                <td>{{ visite_veterinaire.datePassage ? visite_veterinaire.datePassage|date('Y-m-d') : '' }}</td>
+                <td>{{ visite_veterinaire.detailEtatAnimal }}</td>
+                <td>
+                    <a href="{{ path('app_visite_veterinaire_show', {'visite_id': visite_veterinaire.visite_id}) }}">show</a>
+                    <a href="{{ path('app_visite_veterinaire_edit', {'visite_id': visite_veterinaire.visite_id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_visite_veterinaire_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,185 @@
+<div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="/Images/JUNGLE1.png" class="bd-placeholder-img" alt="...">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Accés Employés</h1>
+            <p class="opacity-75">Vous trouverez ici vos fonctionnalités</p>
+           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scene text-center text-white">
+      <div class="hero-scene-content">
+          <h1>Mon compte</h1>
+      </div>
+  </div>
+</div>
+
+
+<body>
+    
+
+  <div class="container" >
+<!-- data-show="vétérinaire" -->
+
+    <form id="VisiteForm">
+
+      <div class="mb-3">
+          <label for="AnilmalInput" class="form-label">Animal ID</label>
+          <input type="text" class="form-control" id="AnilmalInput" placeholder="Exemple : 23" name="TypeAnimal">
+      </div>
+      <div class="mb-3">
+          <label for="NourritureInput" class="form-label">Nourriture proposée</label>
+          <input type="text" class="form-control" id="NourritureInput" placeholder="Nourriture proposée" name="NourritureProposee"> 
+      </div>
+      <div class="mb-3">
+          <label for="GrammageInput" class="form-label">Grammage de la nourriture</label>
+          <input type="text" class="form-control" id="GrammageInput" placeholder="Grammage de la nourriture" name="GrammageNourriture"> 
+      </div>
+      <div class="mb-3">
+          <label for="DatePassageInput" class="form-label">Date de passage</label>
+          <input type="date" class="form-control" id="DatePassageInput" name="DatePassage"> 
+      </div>
+      <div class="mb-3">
+        <label for="HeurePassageInput" class="form-label">Heure de passage</label>
+        <input type="time" class="form-control" id="HeurePassageInput" name="HeurePassage"> 
+    </div>
+
+      <div class="text-center">
+          <button type="button" class="btn btn-primary" id="btnEnvois">Envoyer le compte rendu</button>
+      </div>
+  </form>
+  
+  <title>Tableau des passages des employés</title>
+</head>
+
+<body>
+
+
+  <div class="container mt-4 custom-tr">
+    <h2 class="text-center">Tableau des passages des employés</h2>
+    <div class="table-responsive">
+      <table id="tablePassages" class="table">
+        <thead>
+          <tr>
+            <th>ID de l'animal</th>
+            <th>Nom de l'animal</th>
+            <th>Nourriture apportée</th>
+            <th>Grammage de la nourriture</th>
+            <th>Date de passage</th>
+            <th>Heure de passage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Les passages seront ajoutés ici dynamiquement -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+    <div class="container mt-4 custom-tr">
+      <h2 class="text-center">Tableau des animaux</h2>
+      <div class="table-responsive">
+        <table id="tableAnimal" class="table">
+          <thead>
+            <tr>
+              <th>ID de l'animal</th>
+              <th>Prénom l'animal</th>
+              <th>Race</th>
+              <th>Habitat</th>
+            </tr>
+          </thead>
+          <tbody id="tableAnimalBody" class="Importget">
+            <!-- Les passages seront ajoutés ici dynamiquement -->
+          </tbody>
+          <!-- Le contenu du tableau des animaux sera ajouté ici dynamiquement -->
+        </table>
+      </div>
+    </div>
+
+    <div class="container mt-4 custom-tr">
+      <h2 class="text-center">Tableau des habitats</h2>
+      <div class="table-responsive">
+        <table id="tableHabitat" class="table">
+          <thead>
+            <tr>
+              <th>ID de l'habitat</th>
+              <th>Nom de l'habitat</th>
+            </tr>
+          </thead>
+          <tbody id="tablehabitatBody" class="Importget">
+            <!-- Les passages seront ajoutés ici dynamiquement -->
+          </tbody>
+          <!-- Le contenu du tableau des animaux sera ajouté ici dynamiquement -->
+        </table>
+      </div>
+    </div>
+
+
+    <div class="container mt-4 custom-tr">
+      <h2 class="text-center">Tableau des Avis</h2>
+      <div class="table-responsive">
+        <table id="tableAvis" class="table">
+          <thead>
+            <tr>
+              <th>Avis ID</th>
+              <th>Pseudo</th>
+              <th>Avis</th>
+              <th>Validation</th>
+            </tr>
+          </thead>
+          <tbody id="tableAvisBody" class="Importget">
+            <!-- Les passages seront ajoutés ici dynamiquement -->
+          </tbody>
+          <!-- Le contenu du tableau des animaux sera ajouté ici dynamiquement -->
+        </table>
+      </div>
+    </div>
+
+    <form id="updateAvisForm">
+      <div class="form-group">
+        <label for="avisId">ID de l'avis à modifier</label>
+        <input type="number" class="form-control" id="avisId" placeholder="ID de l'avis à modifier" required>
+      </div>
+      <div class="form-group">
+        <label for="updatedPseudo">Nouveau pseudo</label>
+        <input type="text" class="form-control" id="updatedPseudo" placeholder="Nouveau pseudo" required>
+      </div>
+      <div class="form-group">
+        <label for="updatedAvis">Nouvel avis</label>
+        <textarea class="form-control" id="updatedAvis" placeholder="Nouvel avis" required></textarea>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="updateValidation">
+        <label class="form-check-label" for="updateValidation">Validation</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Mettre à jour l'avis</button>
+    </form>
+    
+    
+    <button class="btn btn-danger mt-3" id="deleteAvisButton">Supprimer un avis</button>
+ 
+    
+    <div class="container mt-4 custom-tr">
+      <h2 class="text-center">Liste des Messages</h2>
+      <div class="table-responsive">
+        <table id="messagesTable" class="table">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Email</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+          <tbody id="messagesBody">
+            <!-- Les données seront ajoutées ici dynamiquement -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+
+</body>

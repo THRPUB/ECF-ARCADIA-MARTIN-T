@@ -1,0 +1,45 @@
+function afficherVisiteVeterinaire(animalList2) {
+  // Récupérer les données de la visite vétérinaire de l'animal ID 20 depuis l'API
+  fetch("http://127.0.0.1:8000/api/visite-veterinaire?animal_id=20")
+    .then(response => response.json())
+    .then(visites => {
+      // Trier les visites par date de passage (du plus récent au plus ancien)
+      visites.sort((a, b) => new Date(b.datePassage) - new Date(a.datePassage));
+
+      // Sélectionner l'élément <ul> où les données seront affichées
+      const ulElement = document.getElementById(animalList2);
+
+      // Effacer le contenu actuel de la liste
+      ulElement.innerHTML = "";
+
+      // Récupérer la dernière visite vétérinaire
+      const derniereVisite = visites[0];
+
+      // Créer un élément <li> pour afficher la date de la visite vétérinaire
+      const dateElement = document.createElement("li");
+      dateElement.className = "list-group-item";
+      const datePassage = new Date(derniereVisite.datePassage);
+      const formattedDate = datePassage.toISOString().split('T')[0];
+      dateElement.innerHTML = `<strong>Date de dernier passage:</strong> ${formattedDate}`;
+      ulElement.appendChild(dateElement);
+
+      // Créer un élément <li> pour afficher l'état de l'animal
+      const etatAnimalElement = document.createElement("li");
+      etatAnimalElement.className = "list-group-item";
+      etatAnimalElement.innerHTML = `<strong>Etat de l'animal:</strong> ${derniereVisite.etatAnimal}`;
+      ulElement.appendChild(etatAnimalElement);
+
+      // Créer un élément <li> pour afficher la dernière nourriture proposée
+      const nourritureProposeeElement = document.createElement("li");
+      nourritureProposeeElement.className = "list-group-item";
+      nourritureProposeeElement.innerHTML = `<strong>Nourriture proposée:</strong> ${derniereVisite.nourritureProposee}`;
+      ulElement.appendChild(nourritureProposeeElement);
+
+      // Afficher l'élément <ul>
+      ulElement.style.display = "block";
+    })
+    .catch(error => {
+      console.error('Erreur lors de la récupération de la visite vétérinaire:', error);
+      alert("Erreur lors de la récupération de la visite vétérinaire. Veuillez réessayer.");
+    });
+}

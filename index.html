@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scss/main.css"/>
+
+    <title>ZOO ARCADIA</title>
+</head>
+<body>
+
+    <header>
+        <header class="fixed-top">
+            <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/"><img src="Images/LOGONAV.png" alt="Logo Arcadia"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link" href="/">Accueil</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/Services">Services</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/Habitats">Habitats</a>
+                      </li>
+                      <li class="nav-item" data-show="ROLE_VETERINAIRE">
+                        <a class="nav-link" href="/Veterinaire">Accès Vétérinaire</a>
+                      </li>
+                      <li class="nav-item" data-show="ROLE_EMPLOYE">
+                        <a class="nav-link" href="/Employe">Accès Employé</a>
+                      </li>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/Contact">Contact</a>
+                      </li>
+                      <li class="nav-item" data-show="ROLE_ADMIN" >
+                        <a class="nav-link" href="/Messages">Messages</a>
+                      </li>
+                      <li class="nav-item" data-show="ROLE_ADMIN">
+                        <a class="nav-link" href="/signup">Ajout de comptes</a>
+                      </li>
+                      <li class="nav-item" data-show="ROLE_ADMIN">
+                        <a class="nav-link" href="/Admin">Dashboard</a>
+                      </li>
+                      <li class="nav-item" data-show="disconnected">
+                        <a class="nav-link" href="/signin">Connexion</a>
+                      </li>
+                      <li class="nav-item" data-show="connected">
+                        <button class="nav-link" id="signout-btn">Deconnexion</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </header> 
+    </header>
+
+    <main id="main-page">
+        <!--Le contenu du site-->
+    </main>
+    
+
+    <footer class="bg-dark py-3 text-white footer"> 
+  
+        <ul class="nav justify-content-center  pb-3 mb-3">
+          <li class="nav-item"><a href="/" class="nav-link text-white">Accueil</a></li> 
+          <li class="nav-item"><a href="/Services" class="nav-link text-white">Services</a></li>
+          <li class="nav-item"><a href="/Habitats" class="nav-link text-white">Habitats</a></li>
+          <li class="nav-item"><a href="/Contact" class="nav-link text-white">Contact</a></li>
+        </ul>
+        <p class="text-center text-white">© 2023 Company, Inc</p> 
+
+      </footer>
+      
+    <script type="module" src="Router/Router.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+     
+</body>
+</html>

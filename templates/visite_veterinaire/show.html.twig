@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}VisiteVeterinaire{% endblock %}
+
+{% block body %}
+    <h1>VisiteVeterinaire</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Visite_id</th>
+                <td>{{ visite_veterinaire.visiteId }}</td>
+            </tr>
+            <tr>
+                <th>Etat_animal</th>
+                <td>{{ visite_veterinaire.etatAnimal }}</td>
+            </tr>
+            <tr>
+                <th>Nourriture_proposee</th>
+                <td>{{ visite_veterinaire.nourritureProposee }}</td>
+            </tr>
+            <tr>
+                <th>Grammage_nourriture</th>
+                <td>{{ visite_veterinaire.grammageNourriture }}</td>
+            </tr>
+            <tr>
+                <th>Date_passage</th>
+                <td>{{ visite_veterinaire.datePassage ? visite_veterinaire.datePassage|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Detail_etat_animal</th>
+                <td>{{ visite_veterinaire.detailEtatAnimal }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_visite_veterinaire_index') }}">back to list</a>
+
+    <a href="{{ path('app_visite_veterinaire_edit', {'visite_id': visite_veterinaire.visite_id}) }}">edit</a>
+
+    {{ include('visite_veterinaire/_delete_form.html.twig') }}
+{% endblock %}

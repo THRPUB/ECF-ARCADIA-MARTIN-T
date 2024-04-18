@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit HorraireZoo{% endblock %}
+
+{% block body %}
+    <h1>Edit HorraireZoo</h1>
+
+    {{ include('horraire_zoo/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_horraire_zoo_index') }}">back to list</a>
+
+    {{ include('horraire_zoo/_delete_form.html.twig') }}
+{% endblock %}

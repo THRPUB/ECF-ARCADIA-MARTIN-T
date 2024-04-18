@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New AvisHabitats{% endblock %}
+
+{% block body %}
+    <h1>Create new AvisHabitats</h1>
+
+    {{ include('avis_habitats/_form.html.twig') }}
+
+    <a href="{{ path('app_avis_habitats_index') }}">back to list</a>
+{% endblock %}

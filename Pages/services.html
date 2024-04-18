@@ -1,0 +1,338 @@
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+      <div class="carousel-item active">
+          <img src="/Images/JUNGLE1.png" class="bd-placeholder-img" alt="...">
+          <div class="container">
+              <div class="carousel-caption">
+                  <h1>Nos Services</h1>
+                  <p class="opacity-75">Vous trouverez ici nos services & activités du zoo</p>
+                  <p><a class="btn btn-lg btn-primary" href="/Contact">Les Horaires</a></p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<div class="container custom-tr">
+  <h2 class="text-center">Nos services</h2>
+  <div class="table-responsive">
+      <table id="tableService" class="table">
+          <thead>
+              <tr>
+                  <th>Nom</th>
+                  <th>Description du service</th>
+              </tr>
+          </thead>
+          <tbody>
+              <!-- Les passages seront ajoutés ici dynamiquement -->
+          </tbody>
+      </table>
+  </div>
+</div>
+
+
+<div class="container mt-5" data-show="ROLE_EMPLOYE">
+  <!-- Button trigger modal -->
+
+  <div class="text-center mt-2">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Ajouter un service
+  </button>
+</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Ajouter un service</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form id="ServiceForm">
+                      <div class="mb-3">
+                          <label for="ServiceInput" class="form-label">Nom du service</label>
+                          <input type="text" class="form-control" id="ServiceInput"
+                              placeholder="Exemple : Visite guidée" name="NomService">
+                      </div>
+                      <div class="mb-3">
+                          <label for="DescriptionInput" class="form-label">Description</label>
+                          <textarea class="form-control" id="DescriptionInput" rows="3"
+                              placeholder="Description du service" name="DescrptService"></textarea>
+                      </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                  <button type="submit" class="btn btn-primary" id="btnEnvois">Ajouter le service</button>
+              </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<div class="text-center mt-2" data-show="ROLE_EMPLOYE">
+  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteServiceModal">
+    Supprimer un service
+  </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="deleteServiceModal" tabindex="-1" aria-labelledby="deleteServiceModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteServiceModalLabel">Supprimer un service</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="deleteServiceForm">
+          <div class="mb-3">
+            <label for="selectService" class="form-label">Choisissez le service à supprimer</label>
+            <select class="form-select" id="selectService" aria-label="Choisissez le service à supprimer" required>
+              <!-- Options seront ajoutées ici dynamiquement -->
+            </select>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-danger">Supprimer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Button trigger modal -->
+
+<div class="text-center mt-2" data-show="ROLE_EMPLOYE">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateServiceModal">
+    Modifier un service
+  </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="updateServiceModal" tabindex="-1" aria-labelledby="updateServiceModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="updateServiceModalLabel">Modifier un service</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="updateServiceForm">
+          <div class="mb-3">
+            <label for="selectServiceToUpdate" class="form-label">Choisissez le service à modifier</label>
+            <select class="form-select" id="selectServiceToUpdate" aria-label="Choisissez le service à modifier" required>
+              <!-- Options seront ajoutées ici dynamiquement -->
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="updatedServiceName" class="form-label">Nouveau nom (ou actuel) du service</label>
+            <input type="text" class="form-control" id="updatedServiceName" placeholder="Entrez le nouveau nom du service">
+          </div>
+          <div class="mb-3">
+            <label for="updatedServiceDescription" class="form-label">Nouvelle (ou actuelle) description du service</label>
+            <textarea class="form-control" id="updatedServiceDescription" rows="3" placeholder="Entrez la nouvelle description du service"></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Modifier</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container mt-5" data-show="ROLE_ADMIN">
+  <!-- Button trigger modal -->
+
+  <div class="text-center mt-2">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Ajouter un service
+  </button>
+</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Ajouter un service</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form id="ServiceForm">
+                      <div class="mb-3">
+                          <label for="ServiceInput" class="form-label">Nom du service</label>
+                          <input type="text" class="form-control" id="ServiceInput"
+                              placeholder="Exemple : Visite guidée" name="NomService">
+                      </div>
+                      <div class="mb-3">
+                          <label for="DescriptionInput" class="form-label">Description</label>
+                          <textarea class="form-control" id="DescriptionInput" rows="3"
+                              placeholder="Description du service" name="DescrptService"></textarea>
+                      </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                  <button type="submit" class="btn btn-primary" id="btnEnvois">Ajouter le service</button>
+              </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<div class="text-center mt-2" data-show="ROLE_ADMIN">
+  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteServiceModal">
+    Supprimer un service
+  </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="deleteServiceModal" tabindex="-1" aria-labelledby="deleteServiceModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteServiceModalLabel">Supprimer un service</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="deleteServiceForm">
+          <div class="mb-3">
+            <label for="selectService" class="form-label">Choisissez le service à supprimer</label>
+            <select class="form-select" id="selectService" aria-label="Choisissez le service à supprimer" required>
+              <!-- Options seront ajoutées ici dynamiquement -->
+            </select>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-danger">Supprimer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Button trigger modal -->
+
+<div class="text-center mt-2" data-show="ROLE_ADMIN">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateServiceModal">
+    Modifier un service
+  </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="updateServiceModal" tabindex="-1" aria-labelledby="updateServiceModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="updateServiceModalLabel">Modifier un service</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="updateServiceForm">
+          <div class="mb-3">
+            <label for="selectServiceToUpdate" class="form-label">Choisissez le service à modifier</label>
+            <select class="form-select" id="selectServiceToUpdate" aria-label="Choisissez le service à modifier" required>
+              <!-- Options seront ajoutées ici dynamiquement -->
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="updatedServiceName" class="form-label">Nouveau nom (ou actuel) du service</label>
+            <input type="text" class="form-control" id="updatedServiceName" placeholder="Entrez le nouveau nom du service">
+          </div>
+          <div class="mb-3">
+            <label for="updatedServiceDescription" class="form-label">Nouvelle (ou actuelle) description du service</label>
+            <textarea class="form-control" id="updatedServiceDescription" rows="3" placeholder="Entrez la nouvelle description du service"></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Modifier</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<section class="Services section-with-padding" style="margin-top: 10rem;">
+
+  <div class="container">
+      <div class="row d-flex align-items-center">
+          <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <!-- Item 1 -->
+                      <picture>
+                          <source media="(max-width: 767px)" srcset="/Images/Services/Restaurantmob.png">
+                          <img src="/Images/Services/Restaurant.png" class="d-block w-100" alt="Image 1">
+                      </picture>
+                      <div class="carousel-caption text-start">
+                          <h1>Restauration</h1>
+                          <p class="opacity-75">Dégustez des plaisirs culinaires uniques dans notre restaurant au
+                              cœur du zoo.</p>
+                    
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <!-- Item 2 -->
+                      <picture>
+                          <source media="(max-width: 767px)" srcset="/Images/Services/visitezoomob.png">
+                          <img src="/Images/Services/Visite zoo.png" class="d-block w-100" alt="Image 1">
+                      </picture>
+                      <div class="carousel-caption">
+                          <h1>Visite guidée</h1>
+                          <p>Visitez les habitats avec un guide (gratuit).</p>
+                          
+                      </div>
+                  </div>
+                  <div class="carousel-item">
+                      <!-- Item 3 -->
+                      <picture>
+                          <source media="(max-width: 767px)" srcset="/Images/Services/Trainmob.png">
+                          <img src="/Images/Services/Train Zoo.png" class="d-block w-100" alt="Image 1">
+                      </picture>
+                      <div class="carousel-caption text-end">
+                          <h1>Tour de train</h1>
+                          <p>"Explorez le zoo avec style à bord de notre petit train, une aventure pittoresque en
+                              mouvement."</p>
+                          
+                      </div>
+                  </div>
+                  <!-- Ajoutez plus d'éléments carousel-item au besoin -->
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+              <ol class="carousel-indicators">
+                  <li data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></li>
+                  <li data-bs-target="#carouselExample" data-bs-slide-to="1"></li>
+                  <li data-bs-target="#carouselExample" data-bs-slide-to="2"></li>
+                  <!-- Ajoutez plus d'indicateurs au besoin -->
+              </ol>
+          </div>
+      </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Veterinaire{% endblock %}
+
+{% block body %}
+    <h1>Veterinaire</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Veterinaire_id</th>
+                <td>{{ veterinaire.veterinaireId }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ veterinaire.nom }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_veterinaire_index') }}">back to list</a>
+
+    <a href="{{ path('app_veterinaire_edit', {'veterinaire_id': veterinaire.veterinaire_id}) }}">edit</a>
+
+    {{ include('veterinaire/_delete_form.html.twig') }}
+{% endblock %}

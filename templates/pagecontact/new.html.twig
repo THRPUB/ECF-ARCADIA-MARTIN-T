@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Pagecontact{% endblock %}
+
+{% block body %}
+    <h1>Create new Pagecontact</h1>
+
+    {{ include('pagecontact/_form.html.twig') }}
+
+    <a href="{{ path('app_pagecontact_index') }}">back to list</a>
+{% endblock %}

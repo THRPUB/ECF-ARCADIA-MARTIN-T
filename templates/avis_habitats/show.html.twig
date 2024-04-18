@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AvisHabitats{% endblock %}
+
+{% block body %}
+    <h1>AvisHabitats</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ avis_habitat.id }}</td>
+            </tr>
+            <tr>
+                <th>Nomveterinaire</th>
+                <td>{{ avis_habitat.nomveterinaire }}</td>
+            </tr>
+            <tr>
+                <th>Nomhabitat</th>
+                <td>{{ avis_habitat.nomhabitat }}</td>
+            </tr>
+            <tr>
+                <th>Avis</th>
+                <td>{{ avis_habitat.avis }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_avis_habitats_index') }}">back to list</a>
+
+    <a href="{{ path('app_avis_habitats_edit', {'id': avis_habitat.id}) }}">edit</a>
+
+    {{ include('avis_habitats/_delete_form.html.twig') }}
+{% endblock %}

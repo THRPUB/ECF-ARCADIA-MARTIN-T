@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit VisiteVeterinaire{% endblock %}
+
+{% block body %}
+    <h1>Edit VisiteVeterinaire</h1>
+
+    {{ include('visite_veterinaire/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_visite_veterinaire_index') }}">back to list</a>
+
+    {{ include('visite_veterinaire/_delete_form.html.twig') }}
+{% endblock %}

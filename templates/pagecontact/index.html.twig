@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pagecontact index{% endblock %}
+
+{% block body %}
+    <h1>Pagecontact index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pagecontact in pagecontacts %}
+            <tr>
+                <td>{{ pagecontact.id }}</td>
+                <td>{{ pagecontact.Nom }}</td>
+                <td>{{ pagecontact.Email }}</td>
+                <td>{{ pagecontact.Message }}</td>
+                <td>
+                    <a href="{{ path('app_pagecontact_show', {'id': pagecontact.id}) }}">show</a>
+                    <a href="{{ path('app_pagecontact_edit', {'id': pagecontact.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_pagecontact_new') }}">Create new</a>
+{% endblock %}

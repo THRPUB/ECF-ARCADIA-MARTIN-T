@@ -1,0 +1,356 @@
+<div class="carousel-inner">
+<div class="carousel-item active">
+    <img src="/Images/JUNGLE1.png" class="bd-placeholder-img" alt="...">
+    <div class="container">
+      <div class="carousel-caption">
+        <h1>Nos habitats</h1>
+        <p class="opacity-75">Vous trouverez ici nos habitats et animaux.</p>
+        <p><a class="btn btn-lg btn-primary" href="/Contact">Les Horraires</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="Services section-with-padding">
+
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <!-- Item 1 -->
+              <picture>
+                <source media="(max-width: 767px)" srcset="/Images/Habitats/savanemob.png">
+                <img src="/Images/Habitats/Savane.png" class="d-block w-100" alt="Image 1">
+              </picture>
+              <div class="carousel-caption text-start">
+                <h1>Savane</h1>
+                <p class="opacity-75">La savane, comme si vous y étiez, invite à une expérience inoubliable au cœur de la nature sauvage, où lions majestueux et éléphants imposants évoluent librement.</p>
+                <p><a class="btn btn-lg btn-primary" href="#savane">Voir</a></p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <!-- Item 2 -->
+              <picture>
+                <source media="(max-width: 767px)" srcset="/Images/Habitats/maraismob.png">
+                <img src="/Images/Habitats/Marais.png" class="d-block w-100" alt="Image 1">
+              </picture>
+              <div class="carousel-caption">
+                <h1>Marais</h1>
+                <p>Le marais, comme si vous y étiez, une immersion unique au cœur de la nature aquatique.</p>
+                <p><a class="btn btn-lg btn-primary" href="#Marais">Voir</a></p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <!-- Item 3 -->
+              <picture>
+                <source media="(max-width: 767px)" srcset="/Images/Habitats/junglemob.png">
+                <img src="/Images/Habitats/Jungle.png" class="d-block w-100" alt="Image 1">
+              </picture>
+              <div class="carousel-caption text-end">
+                <h1>Jungle</h1>
+                <p>La jungle, comme si vous y étiez, une immersion captivante au cœur de la nature exotique.</p>
+                <p><a class="btn btn-lg btn-primary" href="#Jungle">Voir</a></p>
+              </div>
+            </div>
+            <!-- Ajoutez plus d'éléments carousel-item au besoin -->
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <ol class="carousel-indicators">
+            <li data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#carouselExample" data-bs-slide-to="1"></li>
+            <li data-bs-target="#carouselExample" data-bs-slide-to="2"></li>
+            <!-- Ajoutez plus d'indicateurs au besoin -->
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section Savane -->
+  
+<section class="animaux mb-4" id="savane">
+
+  <div class="container marketing bg-black">
+
+     
+    <div class="row featurette">
+      <div class="col-md-5 order-md-2">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="/Images/Habitats/Expliquation/savane.png" alt="Placeholder: 500x500">
+    </div>
+      <div class="col-md-7 order-md-1 custom-col">
+        <h2 class="featurette-heading fw-normal lh-1">La savane, <span class="text-body-secondary">comme si vous y étiez.</span></h2>
+        <p class="lead">" Bienvenue dans notre habitat savane au zoo, une immersion authentique dans les vastes plaines africaines. Lions majestueux, éléphants imposants et girafes gracieuses cohabitent dans des enclos spacieux recréant 
+          leurs habitats naturels. Découvrez la beauté brute de la nature, participez à des activités 
+          éducatives et vivez une expérience inoubliable au cœur de notre coin de paradis africain."</p>
+      </div>
+      </div>
+    </div>
+</div>
+
+     
+    <div class="row justify-content-center">
+
+<!-- Première carte -->
+<div class="card mx-3" style="width: 18rem;">
+  <img src="/Images/Animaux/Savane/Elephant.png" class="card-img-top" alt="...">
+  <div class="card">
+      <h5 class="card-title">Elephant</h5>
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Prénom:</strong> Babar</li>
+          <li class="list-group-item"><strong>Race:</strong> Elephant</li>
+          <li class="list-group-item"><strong>Habitat:</strong> Savane</li>
+      </ul>
+      <button class="btn btn-secondary bouton-info" onclick="afficherDerniereVisiteVeterinaire()">Afficher les informations</button>
+      <ul id="animalList" class="list-group list-group-flush" style="display: none;">
+          <!-- Les données de la visite vétérinaire seront ajoutées ici dynamiquement -->
+      </ul>
+  </div>
+</div>
+
+<!-- Deuxième carte (copie de la première) -->
+<div class="card mx-3" style="width: 18rem;">
+  <img src="/Images/Animaux/Savane/Girafe.png" class="card-img-top" alt="...">
+  <div class="card">
+      <h5 class="card-title">Giraphe</h5> 
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Prénom:</strong> Gifi</li>
+          <li class="list-group-item"><strong>Race:</strong> Giraphen</li>
+          <li class="list-group-item"><strong>Habitat:</strong> Savane</li>
+      </ul>
+      <button class="btn btn-secondary bouton-info" onclick="afficherDerniereVisiteVeterinaire2()">Afficher les informations</button>
+      <ul id="animalList2" class="list-group list-group-flush" style="display: none;">
+          <!-- Les données de la visite vétérinaire seront ajoutées ici dynamiquement -->
+      </ul>
+  </div>
+</div>
+
+<!-- Troisième carte (copie de la première) -->
+<div class="card mx-3" style="width: 18rem;">
+  <img src="/Images/Animaux/Savane/Lion.png" class="card-img-top" alt="...">
+  <div class="card">
+      <h5 class="card-title">Lion</h5> 
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Prénom:</strong> Scarface</li>
+          <li class="list-group-item"><strong>Race:</strong> Lion</li>
+          <li class="list-group-item"><strong>Habitat:</strong> Savane</li>
+      </ul>
+      <button class="btn btn-secondary bouton-info" onclick="afficherDerniereVisiteVeterinaire3()">Afficher les informations</button>
+      <ul id="animalList3" class="list-group list-group-flush" style="display: none;">
+          <!-- Les données de la visite vétérinaire seront ajoutées ici dynamiquement -->
+      </ul>
+  </div>
+</div>
+
+<!-- Quatrième carte (copie de la première) -->
+<div class="card mx-3" style="width: 18rem;">
+  <img src="/Images/Animaux/Savane/Rhino.png" class="card-img-top" alt="...">
+  <div class="card">
+      <h5 class="card-title">Rhinocéros</h5>
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Prénom:</strong> Rhinov</li>
+          <li class="list-group-item"><strong>Race:</strong> Rhinocéros</li>
+          <li class="list-group-item"><strong>Habitat:</strong> Savane</li>
+      </ul>
+      <button class="btn btn-secondary bouton-info" onclick="afficherDerniereVisiteVeterinaire4()">Afficher les informations</button>
+      <ul id="animalList4" class="list-group list-group-flush" style="display: none;">
+          <!-- Les données de la visite vétérinaire seront ajoutées ici dynamiquement -->
+      </ul>
+  </div>
+</div>
+
+    </section>
+
+    
+    
+    <!-- Section Jungle -->
+    <section class="animaux mb-4" id="Jungle">
+    
+    <div class="container marketing bg-black">
+
+      <div class="row featurette">
+        <div class="col-md-5 order-md-1">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="/Images/Habitats/Expliquation/jungle.png" alt="Placeholder: 500x500">
+      </div>
+        <div class="col-md-7 order-md-2 custom-col">
+          <h2 class="featurette-heading fw-normal lh-1">La jungle, <span class="text-body-secondary">une aventure sauvage.</span></h2>
+          <p class="lead">"Explorez notre habitat jungle au zoo, une immersion captivante au cœur de la nature exotique. Cascades mystérieuses, végétation luxuriante et cris 
+            d'animaux vous transportent dans un univers authentique. Rencontrez les tigres majestueux, 
+            singes espiègles et perroquets colorés dans des enclos spacieux, offrant une expérience unique 
+            de la jungle. Plongez-vous dans cette aventure immersive où la magie tropicale prend vie, comme 
+            si vous y étiez."</p>
+      </div>
+      </div>
+  </div>
+
+      <div class="row justify-content-center">
+        <!-- Première carte -->
+        <div class="card mx-3" style="width: 18rem;">
+          <img src="/Images/Animaux/Jungle/Gorille.png" class="card-img-top" alt="...">
+          <div class="card">
+            <h5 class="card-title">Alligator</h5> 
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Prénom:</strong> Kong</li>
+              <li class="list-group-item"><strong>Race:</strong> Gorille</li>
+              <li class="list-group-item"><strong>Habitat:</strong> Jungle</li>
+            </ul>
+              <button class="btn btn-secondary bouton-info" onclick="afficherDerniereVisiteVeterinaire5()">Afficher les informations</button>
+              <ul id="animalList5" class="list-group list-group-flush" style="display: none;">
+                  <!-- Les données de la visite vétérinaire seront ajoutées ici dynamiquement -->
+              </ul>
+          </div>
+        </div>
+      
+        <!-- Deuxième carte (copie de la première) -->
+        <div class="card mx-3" style="width: 18rem;">
+          <img src="/Images/Animaux/Jungle/Léopard.png" class="card-img-top" alt="...">
+          <div class="card">
+            <h5 class="card-title">Alligator</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Prénom:</strong> Léon</li>
+              <li class="list-group-item"><strong>Race:</strong> Léopard</li>
+              <li class="list-group-item"><strong>Habitat:</strong> Jungle</li>
+            </ul>
+              <button class="btn btn-secondary bouton-info" onclick="afficherDerniereVisiteVeterinaire6()">Afficher les informations</button>
+              <ul id="animalList6" class="list-group list-group-flush" style="display: none;">
+                  <!-- Les données de la visite vétérinaire seront ajoutées ici dynamiquement -->
+              </ul>
+          </div>
+        </div>
+      
+        <!-- Troisième carte (copie de la première) -->
+        <div class="card mx-3" style="width: 18rem;">
+          <img src="/Images/Animaux/Jungle/Pangolin.png" class="card-img-top" alt="...">
+          <div class="card">
+            <h5 class="card-title">Alligator</h5> 
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Prénom:</strong> Pageon</li>
+              <li class="list-group-item"><strong>Race:</strong> Pangolin</li>
+              <li class="list-group-item"><strong>Habitat:</strong> Jungle</li>
+            </ul>
+              <button class="btn btn-secondary bouton-info" onclick="afficherDerniereVisiteVeterinaire7()">Afficher les informations</button>
+              <ul id="animalList7" class="list-group list-group-flush" style="display: none;">
+                  <!-- Les données de la visite vétérinaire seront ajoutées ici dynamiquement -->
+              </ul>
+          </div>
+        </div>
+      
+        <!-- Quatrième carte (copie de la première) -->
+        <div class="card mx-3" style="width: 18rem;">
+          <img src="/Images/Animaux/Jungle/Tigre.png" class="card-img-top" alt="...">
+          <div class="card">
+            <h5 class="card-title">Alligator</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Prénom:</strong> Samson</li>
+              <li class="list-group-item"><strong>Race:</strong> Tigre</li>
+              <li class="list-group-item"><strong>Habitat:</strong> Jungle</li>
+            </ul> 
+            <button class="btn btn-secondary bouton-info" onclick="afficherDerniereVisiteVeterinaire8()">Afficher les informations</button>
+            <ul id="animalList8" class="list-group list-group-flush" style="display: none;">
+                <!-- Les données de la visite vétérinaire seront ajoutées ici dynamiquement -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      </section>
+      
+      <!-- Section Marais -->
+    <section class="animaux mb-4" id="Marais">
+ 
+    <div class="container marketing bg-black">
+
+     
+      <div class="row featurette">
+        <div class="col-md-5 order-md-2">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="/Images/Habitats/Expliquation/marais.png" alt="Placeholder: 500x500">
+      </div>
+        <div class="col-md-7 order-md-1 custom-col">
+          <h2 class="featurette-heading fw-normal lh-1">Le Marais, <span class="text-body-secondary">un Sanctuaire Naturel.</span></h2>
+          <p class="lead">"Bienvenue dans notre habitat marais au zoo, où l'environnement aquatique et la végétation luxuriante créent une atmosphère unique. 
+            Explorez des enclos conçus pour nos résidents, tels que les crocodiles majestueux, 
+            les tortues paisibles et les oiseaux aquatiques élégants. 
+            Plongez dans cette aventure immersive où la magie des zones humides prend vie, 
+            comme si vous y étiez. Bienvenue dans notre coin de paradis aquatique au cœur même de notre zoo."</p>
+        </div>
+        </div>
+      </div>
+  </div>
+
+      <div class="row justify-content-center">
+        <!-- Première carte -->
+        <div class="card mx-3" style="width: 18rem;">
+          <img src="/Images/Animaux/Marais/Alligator.png" class="card-img-top" alt="...">
+          <div class="card">
+            <h5 class="card-title">Alligator</h5> 
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Prénom:</strong> Snappy</li>
+              <li class="list-group-item"><strong>Race:</strong> Alligator américain</li>
+              <li class="list-group-item"><strong>Habitat:</strong> Marais</li>
+            </ul>
+            <button class="btn btn-secondary bouton-info" onclick="afficherDerniereVisiteVeterinaire9()">Afficher les informations</button>
+            <ul id="animalList9" class="list-group list-group-flush" style="display: none;">
+                <!-- Les données de la visite vétérinaire seront ajoutées ici dynamiquement -->
+            </ul>
+          </div>
+        </div>
+      
+        <!-- Deuxième carte (copie de la première) -->
+        <div class="card mx-3" style="width: 18rem;">
+          <img src="/Images/Animaux/Marais/Pélican.png" class="card-img-top" alt="...">
+          <div class="card">
+            <h5 class="card-title">Alligator</h5> 
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Prénom:</strong> Pascal</li>
+              <li class="list-group-item"><strong>Race:</strong> Pélican</li>
+              <li class="list-group-item"><strong>Habitat:</strong> Marais</li>
+            </ul>
+            <button class="btn btn-secondary bouton-info" onclick="afficherDerniereVisiteVeterinaire10()">Afficher les informations</button>
+            <ul id="animalList10" class="list-group list-group-flush" style="display: none;">
+                <!-- Les données de la visite vétérinaire seront ajoutées ici dynamiquement -->
+            </ul>
+          </div>
+        </div>
+      
+        <!-- Troisième carte (copie de la première) -->
+        <div class="card mx-3" style="width: 18rem;">
+          <img src="/Images/Animaux/Marais/Tortue de floride.png" class="card-img-top" alt="...">
+          <div class="card">
+            <h5 class="card-title">Alligator</h5> 
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Prénom:</strong> Sheldon</li>
+              <li class="list-group-item"><strong>Race:</strong> Tortue de floride</li>
+              <li class="list-group-item"><strong>Habitat:</strong> Marais</li>
+            </ul>
+            <button class="btn btn-secondary bouton-info" onclick="afficherDerniereVisiteVeterinaire11()">Afficher les informations</button>
+            <ul id="animalList11" class="list-group list-group-flush" style="display: none;">
+                <!-- Les données de la visite vétérinaire seront ajoutées ici dynamiquement -->
+            </ul>
+          </div>
+        </div>
+      
+        <!-- Quatrième carte (copie de la première) -->
+        <div class="card mx-3" style="width: 18rem;">
+          <img src="/Images/Animaux/Marais/TortuePeinte.png" class="card-img-top" alt="...">
+          <div class="card">
+            <h5 class="card-title">Alligator</h5> 
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><strong>Prénom:</strong> Leonardo</li>
+              <li class="list-group-item"><strong>Race:</strong> Tortue peinte</li>
+              <li class="list-group-item"><strong>Habitat:</strong> Marais</li>
+            </ul>
+            <button class="btn btn-secondary bouton-info" onclick="afficherDerniereVisiteVeterinaire12()">Afficher les informations</button>
+            <ul id="animalList12" class="list-group list-group-flush" style="display: none;">
+                <!-- Les données de la visite vétérinaire seront ajoutées ici dynamiquement -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      </section>

@@ -1,0 +1,287 @@
+
+
+<body>
+    <h2 class="text-center mb-3">Tableau des passages des employés</h2>
+    <div class="container mt-4 custom-tr">
+        <h2 class="text-center mt-4">Tableau des passages des employés</h2>
+        <div class="table-responsive">
+            <table id="tablePassages" class="table">
+                <thead>
+                    <tr>
+                        <th>ID de l'animal</th>
+                        <th>Nom de l'animal</th>
+                        <th>Nourriture apportée</th>
+                        <th>Grammage de la nourriture</th>
+                        <th>Date de passage</th>
+                        <th>Heure de passage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les passages seront ajoutés ici dynamiquement -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="container mt-4 custom-tr">
+        <h2 class="text-center">Tableau des passages des Vétérinaire</h2>
+        <div class="table-responsive">
+            <table id="tableVisites" class="table">
+                <thead>
+                    <tr>
+                        <th>ID de l'animal</th>
+                        <th>Prénom l'animal</th>
+                        <th>Etat de l'animal</th>
+                        <th>Nourriture apportée</th>
+                        <th>Grammage de la nourriture</th>
+                        <th>Date de passage</th>
+                        <th>Détails sur l'animal</th>
+                        <th>Nom du vétérinaire</th>
+                    </tr>
+                </thead>
+                <tbody class="Importget">
+                    <!-- Les passages seront ajoutés ici dynamiquement -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="container mt-4 custom-tr">
+        <h2 class="text-center">Tableau des avis des habitats</h2>
+        <div class="table-responsive">
+            <table id="tableAvis" class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom du vétérinaire</th>
+                        <th>Nom de l'habitat</th>
+                        <th>Avis</th>
+                    </tr>
+                </thead>
+                <tbody id="tableAvisBody">
+                    <!-- Les avis seront ajoutés ici dynamiquement -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    
+    <div class="container mt-4 mb-3 custom-tr">
+        <h2 class="text-center">Tableau des animaux</h2>
+        <div class="table-responsive">
+            <table id="tableAnimal" class="table">
+                <thead>
+                    <tr>
+                        <th>ID de l'animal</th>
+                        <th>Prénom l'animal</th>
+                        <th>Race</th>
+                        <th>Habitat</th>
+                    </tr>
+                </thead>
+                <tbody id="tableAnimalBody" class="Importget">
+                    <!-- Les passages seront ajoutés ici dynamiquement -->
+                </tbody>
+                <!-- Le contenu du tableau des animaux sera ajouté ici dynamiquement -->
+            </table>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <!-- Button to trigger the modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Ajouter un animal
+        </button>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ajouter un animal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="animalForm">
+                        <div class="mb-3">
+                            <label for="prenom" class="form-label">Prénom:</label>
+                            <input type="text" class="form-control" id="prenom" name="prenom" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="race" class="form-label">Race:</label>
+                            <input type="text" class="form-control" id="race" name="race" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="image_url" class="form-label">URL de l'image:</label>
+                            <input type="text" class="form-control" id="image_url" name="image_url" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="habitat" class="form-label">Habitat:</label>
+                            <input type="number" class="form-control" id="habitat" name="habitat" required>
+                        </div>
+                        <button id="ajouterBtn" type="submit" class="btn btn-primary">Ajouter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="text-center mt-2">
+    <!-- Button to trigger the modal -->
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+        Supprimer un animal
+    </button>
+</div>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Supprimer un animal</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="animalId" class="form-label">ID de l'animal à supprimer:</label>
+                    <input type="number" class="form-control" id="animalId" name="animalId" required>
+                </div>
+                <p id="deleteConfirmationMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                <button id="confirmDeleteBtn" type="button" class="btn btn-danger">Supprimer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4 custom-tr">
+    <h2 class="text-center mt-4">Tableau consultations des animaux</h2>
+    <div class="table-responsive">
+        <table id="tableAnimauxMongo" class="table">
+            <thead>
+                <tr>
+                    <th>ID de l'animal</th>
+                    <th>Nom de l'animal</th>
+                    <th>Race</th>
+                    <th>Nombre de consultations</th>
+                </tr>
+            </thead>
+            <tbody id="animalMongoBody">
+                <!-- Les données des animaux seront ajoutées ici dynamiquement -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+    
+    <div class="container mt-4 mb-3 custom-tr">
+        <h2 class="text-center">Tableau des habitats</h2>
+        <div class="table-responsive">
+            <table id="tableHabitat" class="table">
+                <thead>
+                    <tr>
+                        <th>ID de l'habitat</th>
+                        <th>Nom de l'habitat</th>
+                    </tr>
+                </thead>
+                <tbody id="tablehabitatBody" class="Importget">
+                    <!-- Les passages seront ajoutés ici dynamiquement -->
+                </tbody>
+                <!-- Le contenu du tableau des animaux sera ajouté ici dynamiquement -->
+            </table>
+        </div>
+    </div>
+    
+
+    <div class="text-center">
+        <!-- Button to trigger the modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalHabitat">
+            Ajouter un habitat
+        </button>
+    </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalHabitat" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ajouter un habitat</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="habitatForm">
+            <div class="mb-3">
+              <label for="nom" class="form-label">Nom</label>
+              <input type="text" class="form-control" id="nom" name="nom" required>
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <input type="text" class="form-control" id="description" name="description" required>
+            </div>
+            <div class="mb-3">
+              <label for="image_url" class="form-label">URL de l'image</label>
+              <input type="text" class="form-control" id="image_url" name="image_url" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Button to trigger the delete habitat modal -->
+<div class="text-center mt-2">
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteHabitatModal">
+        Supprimer un habitat
+    </button>
+</div>
+
+<!-- Delete Habitat Modal -->
+<div class="modal fade" id="deleteHabitatModal" tabindex="-1" aria-labelledby="deleteHabitatModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteHabitatModalLabel">Supprimer un habitat</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="habitatId" class="form-label">ID de l'habitat à supprimer:</label>
+                    <input type="number" class="form-control" id="habitatId" name="habitatId" required>
+                </div>
+                <p id="deleteHabitatConfirmationMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                <button id="confirmDeleteHabitatBtn" type="button" class="btn btn-danger">Supprimer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <h1 style="color: black;">Horaires du Zoo</h1>
+        <table id="horairesTable" class="table">
+          <thead>
+            <tr>
+              <th style="color: black;">Jour</th>
+              <th style="color: black;">Ouverture</th>
+              <th style="color: black;">Fermeture</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Les données seront insérées ici via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+
+</body>

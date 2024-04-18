@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AvisHabitats index{% endblock %}
+
+{% block body %}
+    <h1>AvisHabitats index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nomveterinaire</th>
+                <th>Nomhabitat</th>
+                <th>Avis</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for avis_habitat in avis_habitats %}
+            <tr>
+                <td>{{ avis_habitat.id }}</td>
+                <td>{{ avis_habitat.nomveterinaire }}</td>
+                <td>{{ avis_habitat.nomhabitat }}</td>
+                <td>{{ avis_habitat.avis }}</td>
+                <td>
+                    <a href="{{ path('app_avis_habitats_show', {'id': avis_habitat.id}) }}">show</a>
+                    <a href="{{ path('app_avis_habitats_edit', {'id': avis_habitat.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_avis_habitats_new') }}">Create new</a>
+{% endblock %}
