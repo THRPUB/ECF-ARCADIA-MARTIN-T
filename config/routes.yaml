@@ -2,4 +2,4 @@
 # config/routes.yaml
 home:
     path: /
-    controller: App\Controller\AdminController::index
+    controller: App\Controller\HomeController::index
