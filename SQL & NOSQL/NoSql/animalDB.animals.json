@@ -1,0 +1,108 @@
+[{
+  "_id": {
+    "$oid": "661d339912f5779b5feb0df3"
+  },
+  "animal_id": 19,
+  "nom": "Babar",
+  "race": "Elephant",
+  "consultation_count": 8
+},
+{
+  "_id": {
+    "$oid": "661d339912f5779b5feb0df4"
+  },
+  "animal_id": 20,
+  "nom": "Gifi",
+  "race": "Giraphe",
+  "consultation_count": 5
+},
+{
+  "_id": {
+    "$oid": "661d339912f5779b5feb0df5"
+  },
+  "animal_id": 21,
+  "nom": "Scarface",
+  "race": "Lion",
+  "consultation_count": 4
+},
+{
+  "_id": {
+    "$oid": "661d339912f5779b5feb0df6"
+  },
+  "animal_id": 22,
+  "nom": "Rhinov",
+  "race": "Rhinocéros",
+  "consultation_count": 0
+},
+{
+  "_id": {
+    "$oid": "661d339912f5779b5feb0df7"
+  },
+  "animal_id": 23,
+  "nom": "Kong",
+  "race": "Gorille",
+  "consultation_count": 1
+},
+{
+  "_id": {
+    "$oid": "661d339912f5779b5feb0df8"
+  },
+  "animal_id": 24,
+  "nom": "Léon",
+  "race": "Léopard",
+  "consultation_count": 2
+},
+{
+  "_id": {
+    "$oid": "661d339912f5779b5feb0df9"
+  },
+  "animal_id": 25,
+  "nom": "Pageon",
+  "race": "Pangolin",
+  "consultation_count": 1
+},
+{
+  "_id": {
+    "$oid": "661d339912f5779b5feb0dfa"
+  },
+  "animal_id": 26,
+  "nom": "Samson",
+  "race": "Tigre",
+  "consultation_count": 4
+},
+{
+  "_id": {
+    "$oid": "661d339912f5779b5feb0dfb"
+  },
+  "animal_id": 27,
+  "nom": "Gator",
+  "race": "Alligator",
+  "consultation_count": 1
+},
+{
+  "_id": {
+    "$oid": "661d339912f5779b5feb0dfc"
+  },
+  "animal_id": 28,
+  "nom": "Pascal",
+  "race": "Pélican",
+  "consultation_count": 1
+},
+{
+  "_id": {
+    "$oid": "661d339912f5779b5feb0dfd"
+  },
+  "animal_id": 29,
+  "nom": "Sheldon",
+  "race": "Tortue de Floride",
+  "consultation_count": 1
+},
+{
+  "_id": {
+    "$oid": "661d339912f5779b5feb0dfe"
+  },
+  "animal_id": 30,
+  "nom": "Leonardo",
+  "race": "Tortue Peinte",
+  "consultation_count": 1
+}]
