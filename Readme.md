@@ -91,32 +91,13 @@ Installer les dépendances
 composer install
 ```
 L'installation des dépendances peut prendre plusieurs minutes.
-### Créer et remplir la base de données:
-Pendant les trois prochaines étapes, nous allons: </br>
-- Créer la base données </br>
-- Insérer des comptes utilisateurs dans la base de données </br>
-- Insérer d'autres données dans la base.  </br>
-Il est important de respecter l'ordre des consignes.
-#### Créer la base de donneés
--Un fichier sql permettant de créer la base de données et les tables est disponible dans le dossier Documentation\SQL </br>
--S'y positionner depuis le dossier Arcadia:
-```
-cd SQL & NOSQL
 
-``` 
-Créer la base de données en se servant du fichier sql:
-- se connecter à mysql
+```bash
+$ php bin/console d:d:c   # Create your DATABASE related to your .env.local configuration
+$ php bin/console d:m:m   # Run migrations to setup your DATABASE according to your entities
 ```
-mysql -u \votreUsername\ -p\votrePassword\
-````
-- utiliser le fichier
-```
-source creation_db.sql
-```
-Quitter mysql (ctrl / cmd + c) & Revenir au dossier Arcadia:
-```
-cd ../../
-```
+
+-> Dans votre interface PhpMyAdmin inserez les données présentes dans le fichier SQL "insert_data.sql"
 
 Créer la base de données Nosql en se servant du fichier Nosql:
 
