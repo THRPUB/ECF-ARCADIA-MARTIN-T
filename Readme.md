@@ -90,6 +90,10 @@ Installer les dépendances
 ```
 composer install
 ```
+```
+npm install
+```
+
 L'installation des dépendances peut prendre plusieurs minutes.
 
 ```bash
