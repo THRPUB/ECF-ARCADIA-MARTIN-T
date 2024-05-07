@@ -1,6 +1,6 @@
 # __Projet Arcadia__
 
-https://ecfarcadiazoo.alwaysdata.net/
+zooarcadia.alwaysdata.net
 
 ## __Getting Started__
 
