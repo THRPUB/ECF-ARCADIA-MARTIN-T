@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 
 // Connexion à la base de données MongoDB
-mongoose.connect('mongodb://localhost:27017/animalDB', {
+mongoose.connect('mongodb+srv://arcadia-thrpub:74aPzJfzTQKTcsNP@arcadia-thrpub.njyc0yh.mongodb.net/animalDB', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
