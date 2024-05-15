@@ -1,17 +1,24 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-
 const app = express();
+
+const PORT = 4000;
+app.listen(PORT, () => {
+    console.log(`Serveur en cours d'exécution sur le port ${PORT}`);
+});
 
 // Middleware CORS pour autoriser les requêtes depuis tous les domaines
 app.use(cors());
 
 // Connexion à la base de données MongoDB
-mongoose.connect('mongodb+srv://arcadia-thrpub:74aPzJfzTQKTcsNP@arcadia-thrpub.njyc0yh.mongodb.net/animalDB', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+mongoose.connect('mongodb+srv://THRPUB:Azerty11%40@arcadia.s6c3pnq.mongodb.net/animalDB')
+    .then(() => {
+        console.log('Connecté à MongoDB');
+    })
+    .catch((err) => {
+        console.error('Erreur de connexion à MongoDB', err);
+    });
 
 // Définition du schéma pour la collection 'animal'
 const AnimalSchema = new mongoose.Schema({
@@ -59,7 +66,3 @@ app.get('/animals', async (req, res) => {
 });
 
 // Lancer le serveur
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => {
-    console.log(`Serveur en cours d'exécution sur le port ${PORT}`);
-});
